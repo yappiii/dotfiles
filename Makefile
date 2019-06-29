@@ -29,3 +29,9 @@ init:
 nvim:
 	$(call link,nvim,~/.config/nvim)
 .PHONY: nvim
+
+dein: nvim
+	git clone \
+		https://github.com/Shougo/dein.vim \
+		~/.vim/plugins/repos/github.com/Shougo/dein.vim
+.PHONY: dein
