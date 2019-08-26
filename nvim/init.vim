@@ -33,7 +33,7 @@ if has('vim_starting') && dein#check_install()
 	call dein#install()
 endif
 
-" plugin settings
+" plugin dependencies
 
 "" # ayu
 set termguicolors
@@ -42,6 +42,12 @@ colorscheme ayu
 
 "" # airline
 let g:airline_theme='ayu_mirage'
+
+"" # deoplete
+let g:deoplete#enable_at_startup = 1
+
+"" # phpactor
+autocmd FileType php setlocal omnifunc=phpactor#Complete
 
 filetype plugin indent on
 syntax enable
