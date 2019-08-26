@@ -3,9 +3,21 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
-hook_add = '''
-	colorscheme iceberg
-'''
+
+[[plugins]]
+repo = 'ayu-theme/ayu-vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'phpactor/phpactor'
+on_ft = ['php']
+build = 'composer install'
 
 [[plugins]]
 repo = 'cespare/vim-toml'

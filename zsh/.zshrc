@@ -1,3 +1,7 @@
+# dependencies
+## phpbrew
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
 # load prompt
 autoload -U promptinit; promptinit
 prompt pure
