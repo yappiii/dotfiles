@@ -48,6 +48,8 @@ let g:deoplete#enable_at_startup = 1
 
 "" # phpactor
 autocmd FileType php setlocal omnifunc=phpactor#Complete
+nmap <silent><C-j> :<C-u>call phpactor#GotoDefinition()<CR>
+vmap <silent><C-h> :<C-u>call phpactor#Hover()<CR>
 
 filetype plugin indent on
 syntax enable
