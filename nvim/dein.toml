@@ -32,3 +32,6 @@ repo = 'kristijanhusak/deoplete-phpactor'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'tobyS/pdv'
