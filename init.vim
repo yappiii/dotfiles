@@ -1,0 +1,1 @@
+/Users/t-yoneya/.config/nvim/init.vim

@@ -28,10 +28,21 @@ init:
 
 nvim:
 	$(call link,nvim,~/.config/nvim)
+	$(call link,vim/vimrc,~/.config/nvim/init.vim)
 .PHONY: nvim
+
+zsh:
+	$(call link,zsh/.zshenv,~/.zshenv)
+	$(call link,zsh,~/.zsh)
+	export ZDOTDIR=$HOME/.zsh
+.PHONY: zsh
 
 dein: nvim
 	git clone \
 		https://github.com/Shougo/dein.vim \
 		~/.vim/plugins/repos/github.com/Shougo/dein.vim
+	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+	sh ./installer.sh ~/.cache/dein
+	pip3 install --user pynvim
+	rm installer.sh
 .PHONY: dein
