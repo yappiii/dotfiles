@@ -6,6 +6,7 @@ set number
 set shiftwidth=4
 set splitright
 set tabstop=5
+set whichwrap+=h,l
 
 " emacs keybind
 imap <C-p> <Up>
