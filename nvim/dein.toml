@@ -35,3 +35,6 @@ repo = 'cespare/vim-toml'
 
 [[plugins]]
 repo = 'tobyS/pdv'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
