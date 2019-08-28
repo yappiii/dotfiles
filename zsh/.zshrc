@@ -28,4 +28,4 @@ SAVEHIST=1000000
 setopt share_history
 
 # custom aliases
-alias ll='ls -l'
+alias ll='ls -la'

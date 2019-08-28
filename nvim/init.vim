@@ -2,10 +2,13 @@
 set autoindent
 set clipboard=unnamed
 set hls
+set list
+set listchars=tab:\▸\ ,eol:↲
+set noexpandtab
 set number
 set shiftwidth=4
 set splitright
-set tabstop=5
+set tabstop=4
 set whichwrap+=h,l
 
 " emacs keybind
