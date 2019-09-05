@@ -1,0 +1,10 @@
+# Binaries
+brew 'nvim'
+brew 'lsd'
+brew 'zsh'
+
+# Development
+brew 'php'
+brew 'mysql'
+
+# add nodebrew & phpbrew
