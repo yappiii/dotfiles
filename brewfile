@@ -1,3 +1,8 @@
+# Taps
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+tap 'homebrew/bundle'
+
 # Binaries
 brew 'nvim'
 brew 'lsd'
