@@ -8,3 +8,14 @@ brew 'php'
 brew 'mysql'
 
 # add nodebrew & phpbrew
+
+# Apps
+cask 'alfred'
+cask 'docker'
+
+# Fonts
+cask 'font-source-code-pro'
+cask 'sequel-pro'
+
+# Mac App Store
+mas 'Enpass'
