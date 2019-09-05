@@ -12,6 +12,7 @@ brew 'mysql'
 # Apps
 cask 'alfred'
 cask 'docker'
+cask 'google-chrome'
 
 # Fonts
 cask 'font-source-code-pro'
