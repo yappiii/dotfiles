@@ -15,6 +15,7 @@ set whichwrap+=h,l
 " emacs keybind
 imap <C-p> <Up>
 imap <C-n> <Down>
+nnoremap ; :
 
 " init
 set autoindent
