@@ -60,7 +60,7 @@ endif
 " plugin dependencies
 
 "" # ayu
-" 背景透過用の設定
+""" 背景透過用の設定
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
 set termguicolors
@@ -76,6 +76,6 @@ autocmd FileType php setlocal omnifunc=phpactor#Complete
 filetype plugin indent on
 syntax enable
 
-" 背景透過
+"" 背景透過 - colorschemeに依存しているため、ここで実行
 hi! Normal ctermbg=NONE guibg=NONE
 hi! statusline ctermbg=NONE guibg=NONE
