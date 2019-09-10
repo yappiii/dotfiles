@@ -1,6 +1,8 @@
 # dependencies
 ## phpbrew
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+## nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # load prompt
 autoload -U promptinit; promptinit
