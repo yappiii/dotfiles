@@ -1,6 +1,7 @@
 " init
 set autoindent
 set clipboard=unnamed
+set diffopt=internal,filler,algorithm:histogram,indent-heuristic
 set hls
 set list
 set listchars=tab:\▸\ ,eol:↲
