@@ -16,30 +16,14 @@ set whichwrap+=h,l
 " emacs keybind
 imap <C-p> <Up>
 imap <C-n> <Down>
-nnoremap ; :
-
-" init
-set autoindent
-set clipboard=unnamed
-set hls
-set list
-set listchars=tab:\▸\ ,eol:↲
-set noexpandtab
-set number
-set shiftwidth=4
-set splitright
-set tabstop=4
-set whichwrap+=h,l
-set updatetime=250
-
-" emacs keybind
-imap <C-p> <Up>
-imap <C-n> <Down>
 imap <C-b> <Left>
 imap <C-f> <Right>
 imap <C-e> <End>
 imap <C-d> <Del>
 imap <C-h> <BS>
+
+" other custom keybind
+nnoremap ; :
 
 " dein settings
 if &compatible
