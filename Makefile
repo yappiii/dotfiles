@@ -37,6 +37,10 @@ zsh:
 	export ZDOTDIR=$HOME/.zsh
 .PHONY: zsh
 
+tmux:
+	$(call link,tmux/.tmux.conf,~/.tmux.conf)
+.PHONY: tmux
+
 dein: nvim
 	git clone \
 		https://github.com/Shougo/dein.vim \

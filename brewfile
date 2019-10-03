@@ -25,3 +25,6 @@ cask 'sequel-pro'
 
 # Mac App Store
 mas 'Enpass'
+
+# share clipboard to tmux
+brew 'reattach-to-user-namespace'
