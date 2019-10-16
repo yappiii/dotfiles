@@ -31,3 +31,6 @@ repo = 'tobyS/pdv'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
