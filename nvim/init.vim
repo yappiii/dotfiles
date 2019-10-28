@@ -1,17 +1,26 @@
 " init
 set autoindent
 set clipboard=unnamed
+set cmdheight=2
 set diffopt=internal,filler,algorithm:histogram,indent-heuristic
 set hls
+set ignorecase
+set inccommand=split
 set list
 set listchars=tab:\▸\ ,eol:↲
+set nobackup
 set noexpandtab
+set nowritebackup
 set number
 set shiftwidth=4
+set shortmess+=c
+set signcolumn=yes
+set smartcase
 set splitright
 set tabstop=4
 set updatetime=250
 set whichwrap+=h,l
+set wrapscan
 
 " emacs keybind
 imap <C-p> <Up>
@@ -75,6 +84,8 @@ nmap <silent><Space>j :<C-u>call DefinitionJumpWithPhpactor()<CR>
 nmap <silent><Space>tt :<C-u>call phpactor#Transform()<CR>
 """ vartical information
 vmap <silent><Space>hh :<C-u>call phpactor#Hover()<CR>
+
+"" # denite
 
 filetype plugin indent on
 syntax enable

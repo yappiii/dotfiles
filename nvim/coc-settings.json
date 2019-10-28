@@ -1,0 +1,13 @@
+{
+	"languageserver": {
+		"phpactor" : {
+			"command": "/home/daniel/www/phpactor/phpactor/bin/phpactor",
+			"args": ["language-server"],
+			"filetypes": ["php"],
+			"initializationOptions": {
+			},
+			"settings": {
+			}
+		}
+	}
+}
