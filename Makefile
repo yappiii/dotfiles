@@ -50,3 +50,8 @@ dein: nvim
 	pip3 install --user pynvim
 	rm installer.sh
 .PHONY: dein
+
+hammerspoon:
+	$(MKDIR) ~/.hammerspoon
+	git clone https://github.com/agzam/spacehammer ~/.hammerspoon
+.PHONY: hammerspoon

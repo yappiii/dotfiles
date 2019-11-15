@@ -61,31 +61,16 @@ set termguicolors
 let ayucolor="mirage"
 colorscheme ayu
 
-"" # deoplete
-let g:deoplete#enable_at_startup = 1
+"" # coc-nvim
+highlight CocErrorSign ctermfg=15 ctermbg=196
+highlight CocWarningSign ctermfg=0 ctermbg=172
 
-"" # phpactor
-autocmd FileType php setlocal omnifunc=phpactor#Complete
-
-function! DefinitionJumpWithPhpactor()
-	vsplit
-	call phpactor#GotoDefinition()
-endfunction
-
-""" use completion
-nmap <silent><Space>u :<C-u>call phpactor#UseAdd()<CR>
-""" context menu
-nmap <silent><Space>mm :<C-u>call phpactor#ContextMenu()<CR>
-""" navigation menu
-nmap <silent><Space>nn :<C-u>call phpactor#Navigate()<CR>
-""" jump to definition
-nmap <silent><Space>j :<C-u>call DefinitionJumpWithPhpactor()<CR>
-""" Construct completion / create interface
-nmap <silent><Space>tt :<C-u>call phpactor#Transform()<CR>
-""" vartical information
-vmap <silent><Space>hh :<C-u>call phpactor#Hover()<CR>
-
-"" # denite
+""" coc-list
+nmap <silent> <space><space> :<C-u>CocList<cr>
+""" Hover
+nmap <silent> <space>h :<C-u>call CocAction('doHover')<cr>
+""" Difinition
+nmap <silent> <space>j <Plug>(coc-definition)
 
 filetype plugin indent on
 syntax enable

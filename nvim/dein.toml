@@ -8,27 +8,10 @@ repo = 'cocopon/iceberg.vim'
 repo = 'ayu-theme/ayu-vim'
 
 [[plugins]]
-repo = 'phpactor/phpactor'
-on_ft = ['php']
-build = 'composer install'
-depends = ['kristijanhusak/deoplete-phpactor']
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-depends = ['kristijanhusak/deoplete-phpactor']
-on_i = 1
-
-[[plugins]]
 repo = 'roxma/nvim-yarp'
 
 [[plugins]]
-repo = 'kristijanhusak/deoplete-phpactor'
-
-[[plugins]]
 repo = 'cespare/vim-toml'
-
-[[plugins]]
-repo = 'tobyS/pdv'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
@@ -37,8 +20,6 @@ repo = 'airblade/vim-gitgutter'
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-
-[[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
+hook_add = 'CocInstall coc-lists'

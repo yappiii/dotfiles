@@ -7,6 +7,7 @@ tap 'homebrew/bundle'
 brew 'nvim'
 brew 'lsd'
 brew 'zsh'
+brew 'luarocks'
 
 # Development
 brew 'php'
@@ -18,6 +19,7 @@ brew 'mysql'
 cask 'alfred'
 cask 'docker'
 cask 'google-chrome'
+cask 'hammerspoon'
 
 # Fonts
 cask 'font-source-code-pro'
