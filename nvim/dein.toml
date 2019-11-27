@@ -22,4 +22,3 @@ repo = 'editorconfig/editorconfig-vim'
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-hook_add = 'CocInstall coc-lists'
