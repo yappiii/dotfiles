@@ -8,6 +8,7 @@ brew 'nvim'
 brew 'lsd'
 brew 'zsh'
 brew 'luarocks'
+brew 'the_silver_searcher'
 
 # Development
 brew 'php'

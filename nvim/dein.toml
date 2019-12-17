@@ -22,3 +22,12 @@ repo = 'editorconfig/editorconfig-vim'
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+merged = 0
