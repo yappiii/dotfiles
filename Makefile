@@ -23,7 +23,8 @@ local:
 .PHONY: local
 
 init:
-	npm install --global pure-prompt
+	npm i pure-prompt -g
+	npm i intelephense -g
 .PHONY: init
 
 nvim:
