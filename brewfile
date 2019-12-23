@@ -1,33 +1,49 @@
-# Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'homebrew/bundle'
-
-# Binaries
-brew 'nvim'
-brew 'lsd'
-brew 'zsh'
-brew 'luarocks'
-brew 'the_silver_searcher'
-
-# Development
-brew 'php'
-brew 'mysql'
-
-# add nodebrew & phpbrew
-
-# Apps
-cask 'alfred'
-cask 'docker'
-cask 'google-chrome'
-cask 'hammerspoon'
-
-# Fonts
-cask 'font-source-code-pro'
-cask 'sequel-pro'
-
-# Mac App Store
-mas 'Enpass'
-
-# share clipboard to tmux
-brew 'reattach-to-user-namespace'
+tap "delphinus/sfmono-square"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "bzip2"
+brew "readline"
+brew "python"
+brew "colordiff"
+brew "composer"
+brew "coreutils"
+brew "cowsay"
+brew "curl"
+brew "docker", link: false
+brew "icu4c"
+brew "fzf"
+brew "git"
+brew "go"
+brew "graphviz"
+brew "intltool"
+brew "jq"
+brew "libxml2"
+brew "lsd"
+brew "luarocks"
+brew "mcrypt"
+brew "mysql"
+brew "neovim"
+brew "nodebrew"
+brew "peco"
+brew "plantuml"
+brew "postgresql"
+brew "pyenv"
+brew "reattach-to-user-namespace"
+brew "terminal-notifier"
+brew "the_silver_searcher"
+brew "tmux"
+brew "tree"
+brew "vim"
+brew "yarn"
+brew "zlib"
+brew "zplug"
+brew "zsh"
+brew "delphinus/sfmono-square/sfmono-square"
+cask "docker"
+cask "google-chrome"
+cask "hammerspoon"
+cask "java"
+cask "vagrant"
+cask "virtualbox"
+cask "visual-studio-code"
