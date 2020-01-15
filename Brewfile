@@ -12,6 +12,7 @@ brew "cowsay"
 brew "curl"
 brew "docker", link: false
 brew "icu4c"
+brew "eslint"
 brew "fzf"
 brew "git"
 brew "go"

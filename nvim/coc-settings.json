@@ -8,5 +8,7 @@
         "storagePath": "/tmp/intelephense"
       }
     }
-  }
+  },
+  "tsserver.enableJavascript": true,
+  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx", "vue"]
 }

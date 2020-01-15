@@ -51,6 +51,9 @@ if has('vim_starting') && dein#check_install()
 	call dein#install()
 endif
 
+" node settings
+let g:node_host_prog = system('echo -n $(which neovim-node-host)')
+
 " plugin dependencies
 
 "" # ayu
