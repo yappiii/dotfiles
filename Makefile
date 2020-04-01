@@ -29,13 +29,13 @@ init:
 
 nvim:
 	$(call link,nvim,~/.config/nvim)
-	$(call link,vim/vimrc,~/.config/nvim/init.vim)
+	$(call link,nvim/init.vim,~/.config/nvim/init.vim)
 .PHONY: nvim
 
 zsh:
 	$(call link,zsh/.zshenv,~/.zshenv)
-	$(call link,zsh,~/.zsh)
-	export ZDOTDIR=$HOME/.zsh
+	$(call link,zsh/.zshrc,~/.zshrc)
+	export ZDOTDIR=$HOME/.zshrc
 .PHONY: zsh
 
 tmux:
