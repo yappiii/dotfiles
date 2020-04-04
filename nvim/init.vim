@@ -53,6 +53,10 @@ endif
 
 " node settings
 let g:node_host_prog = system('echo -n $(which neovim-node-host)')
+"" tsxを開いた時のsyntax ruleを上書く
+au BufNewFile,BufRead *.tsx setf typescript.tsx
+"" 暫定対応
+au BufNewFile,BufRead let b:coc_root_patterns = ['.env']
 
 " plugin dependencies
 
