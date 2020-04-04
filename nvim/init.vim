@@ -3,21 +3,21 @@ set autoindent
 set clipboard=unnamed
 set cmdheight=2
 set diffopt=internal,filler,algorithm:histogram,indent-heuristic
+set expandtab
 set hls
 set ignorecase
 set inccommand=split
 set list
 set listchars=tab:\▸\ ,eol:↲
 set nobackup
-set noexpandtab
 set nowritebackup
 set number
-set shiftwidth=4
+set shiftwidth=2
 set shortmess+=c
 set signcolumn=yes
 set smartcase
 set splitright
-set tabstop=4
+set tabstop=2
 set updatetime=250
 set whichwrap+=h,l
 set wrapscan
