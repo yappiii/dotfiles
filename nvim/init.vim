@@ -78,6 +78,8 @@ nmap <silent> <space><space> :<C-u>CocList<cr>
 nmap <silent> <space>h :<C-u>call CocAction('doHover')<cr>
 """ Difinition
 nmap <silent> <space>j <Plug>(coc-definition)
+""" explorer
+nmap <silent> <space>e :<C-u>CocCommand explorer<cr>
 
 filetype plugin indent on
 syntax enable
