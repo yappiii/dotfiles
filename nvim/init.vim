@@ -65,7 +65,7 @@ au BufNewFile,BufRead let b:coc_root_patterns = ['.env']
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
 set termguicolors
-let ayucolor="mirage"
+let ayucolor="dark"
 colorscheme ayu
 
 "" # coc-nvim
@@ -86,4 +86,7 @@ syntax enable
 
 "" 背景透過 - colorschemeに依存しているため、ここで実行
 hi! Normal ctermbg=NONE guibg=NONE
+hi! SpecialKey ctermbg=NONE guibg=NONE
+hi! EndOgBuffer ctermbg=NONE guibg=NONE
 hi! statusline ctermbg=NONE guibg=NONE
+hi! SignColumn ctermbg=NONE guibg=NONE

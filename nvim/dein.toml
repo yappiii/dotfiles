@@ -34,3 +34,9 @@ merged = 0
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'tbodt/deoplete-tabnine'
+
+[[plugins]]
+repo = 'segeljakt/vim-silicon'
