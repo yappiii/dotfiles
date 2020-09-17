@@ -4,10 +4,11 @@
 ## nodebrew
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.anyenv/bin
 
 # load prompt
-autoload -U promptinit; promptinit
-prompt pure
+# autoload -U promptinit; promptinit
+# prompt pure
 
 # completion
 autoload -Uz compinit; compinit
@@ -33,3 +34,6 @@ setopt share_history
 # custom aliases
 alias ls='lsd'
 alias ll='ls -la'
+
+eval "$(starship init zsh)"
+eval "$(anyenv init -)"
