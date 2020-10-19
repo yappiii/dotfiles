@@ -4,7 +4,7 @@
 ## nodebrew
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/.anyenv/bin
+export PATH=$PATH:$HOME/.nodenv/bin
 
 # load prompt
 # autoload -U promptinit; promptinit
@@ -37,3 +37,4 @@ alias ll='ls -la'
 
 eval "$(starship init zsh)"
 eval "$(anyenv init -)"
+eval "$(nodenv init -)"
