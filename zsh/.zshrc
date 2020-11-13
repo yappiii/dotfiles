@@ -38,3 +38,4 @@ alias ll='ls -la'
 eval "$(starship init zsh)"
 eval "$(anyenv init -)"
 eval "$(nodenv init -)"
+eval "$(pyenv init -)"

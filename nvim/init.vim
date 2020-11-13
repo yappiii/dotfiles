@@ -3,7 +3,9 @@ set autoindent
 set clipboard=unnamed
 set cmdheight=2
 set diffopt=internal,filler,algorithm:histogram,indent-heuristic
+set encoding=utf-8
 set expandtab
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set hls
 set ignorecase
 set inccommand=split
