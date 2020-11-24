@@ -2,9 +2,8 @@
 ## phpbrew
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 ## nodebrew
-export PATH=$PATH:$HOME/.nodebrew/current/bin
 export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/.nodenv/bin
+export PATH=$PATH:$HOME/.anyenv/bin
 
 # load prompt
 # autoload -U promptinit; promptinit

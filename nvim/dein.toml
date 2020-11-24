@@ -40,3 +40,6 @@ repo = 'tbodt/deoplete-tabnine'
 
 [[plugins]]
 repo = 'segeljakt/vim-silicon'
+
+[[plugins]]
+repo = 'skanehira/preview-uml.vim'
