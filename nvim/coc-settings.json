@@ -10,5 +10,10 @@
     }
   },
   "tsserver.enableJavascript": true,
-  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx", "vue"]
+  "coc.preferences.rootPatterns": [".gitignore", ".env", ".git"],
+  "explorer.file.autoReveal": false,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.icon.enableVimDevicons": true,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.width": 30
 }

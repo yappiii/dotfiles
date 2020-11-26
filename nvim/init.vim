@@ -6,6 +6,7 @@ set diffopt=internal,filler,algorithm:histogram,indent-heuristic
 set encoding=utf-8
 set expandtab
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set hidden
 set hls
 set ignorecase
 set inccommand=split
@@ -81,7 +82,13 @@ nmap <silent> <space>h :<C-u>call CocAction('doHover')<cr>
 """ Difinition
 nmap <silent> <space>j <Plug>(coc-definition)
 """ explorer
-nmap <silent> <space>e :<C-u>CocCommand explorer<cr>
+let g:coc_explorer_global_presets = {
+\   'pwd': {
+\     'root-uri': getcwd(),
+\   },
+\ }
+
+nmap <silent> <space>e :<C-u>CocCommand explorer --preset pwd<cr>
 
 filetype plugin indent on
 syntax enable

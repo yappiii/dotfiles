@@ -43,3 +43,6 @@ repo = 'segeljakt/vim-silicon'
 
 [[plugins]]
 repo = 'skanehira/preview-uml.vim'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
