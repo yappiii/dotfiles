@@ -2,6 +2,7 @@
 set autoindent
 set clipboard=unnamed
 set cmdheight=2
+set fenc=utf-8
 set diffopt=internal,filler,algorithm:histogram,indent-heuristic
 set encoding=utf-8
 set expandtab
