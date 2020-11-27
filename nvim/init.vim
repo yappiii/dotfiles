@@ -97,6 +97,9 @@ syntax enable
 "" preview-uml.vim
 let g:preview_uml_url='http://localhost:8888'
 
+"" preview-markdown.vim
+let g:preview_markdown_vertical = 1
+
 "" 背景透過 - colorschemeに依存しているため、ここで実行
 hi! Normal ctermbg=NONE guibg=NONE
 hi! SpecialKey ctermbg=NONE guibg=NONE
