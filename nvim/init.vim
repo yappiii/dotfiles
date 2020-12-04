@@ -104,5 +104,6 @@ let g:preview_markdown_vertical = 1
 hi! Normal ctermbg=NONE guibg=NONE
 hi! SpecialKey ctermbg=NONE guibg=NONE
 hi! EndOgBuffer ctermbg=NONE guibg=NONE
-hi! statusline ctermbg=NONE guibg=NONE
+hi! Statusline ctermbg=NONE guibg=NONE
+hi! StatuslineNC ctermbg=NONE guibg=NONE
 hi! SignColumn ctermbg=NONE guibg=NONE
