@@ -6,7 +6,7 @@ set fenc=utf-8
 set diffopt=internal,filler,algorithm:histogram,indent-heuristic
 set encoding=utf-8
 set expandtab
-set fileencodings=utf-8
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set hidden
 set hls
 set ignorecase
@@ -75,6 +75,7 @@ colorscheme ayu
 "" # coc-nvim
 highlight CocErrorSign ctermfg=15 ctermbg=196
 highlight CocWarningSign ctermfg=0 ctermbg=172
+let g:coc_node_path = "~/.anyenv/envs/nodenv/versions/14.10.0/bin/node"
 
 """ coc-list
 nmap <silent> <space><space> :<C-u>CocList<cr>

@@ -49,3 +49,6 @@ repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo = 'skanehira/preview-markdown.vim'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'

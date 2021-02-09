@@ -59,6 +59,10 @@ hs.hotkey.bind(mash, 'L', function() hs.window.focusedWindow():focusWindowEast()
 hs.hotkey.bind(mash, 'K', function() hs.window.focusedWindow():focusWindowNorth() end)
 hs.hotkey.bind(mash, 'J', function() hs.window.focusedWindow():focusWindowSouth() end)
 
+-- change sound volume
+hs.hotkey.bind(mash, '=', function() hs.itunes.volumeUp() end)
+hs.hotkey.bind(mash, '-', function() hs.itunes.volumeDown() end)
+
 -- multi monitor
 hs.hotkey.bind(mash, "N", function()
   hs.grid.pushWindowNextScreen()
