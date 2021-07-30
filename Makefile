@@ -22,11 +22,6 @@ local:
 	touch ~/.local/zshrc
 .PHONY: local
 
-init:
-	npm i pure-prompt -g
-	npm i intelephense -g
-.PHONY: init
-
 nvim:
 	$(call link,nvim,~/.config/nvim)
 	$(call link,nvim/init.vim,~/.config/nvim/init.vim)
@@ -41,16 +36,6 @@ zsh:
 tmux:
 	$(call link,tmux/.tmux.conf,~/.tmux.conf)
 .PHONY: tmux
-
-dein: nvim
-	git clone \
-		https://github.com/Shougo/dein.vim \
-		~/.vim/plugins/repos/github.com/Shougo/dein.vim
-	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-	sh ./installer.sh ~/.cache/dein
-	pip3 install --user pynvim
-	rm installer.sh
-.PHONY: dein
 
 hammerspoon:
 	$(MKDIR) ~/.hammerspoon
