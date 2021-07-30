@@ -4,7 +4,7 @@
 ## nodebrew
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.anyenv/bin
-export PATH=$PATH:$HOME/dotfiles2/node_modules/.bin
+export PATH=$PATH:$HOME/dotfiles2/bin/node_modules/.bin
 
 # load prompt
 # autoload -U promptinit; promptinit
