@@ -1,0 +1,11 @@
+{
+  "name": "dotfiles2",
+  "version": "1.0.0",
+  "repository": "git@github.com:hogeya/dotfiles2",
+  "author": "hogeya <rice410shopper@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-amplify/cli": "^5.2.1",
+    "gtop": "^1.1.1"
+  }
+}

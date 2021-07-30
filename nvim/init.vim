@@ -75,7 +75,7 @@ colorscheme ayu
 "" # coc-nvim
 highlight CocErrorSign ctermfg=15 ctermbg=196
 highlight CocWarningSign ctermfg=0 ctermbg=172
-let g:coc_node_path = "~/.anyenv/envs/nodenv/versions/14.10.0/bin/node"
+let g:coc_node_path = "~/.anyenv/envs/nodenv/versions/16.0.0/bin/node"
 
 """ coc-list
 nmap <silent> <space><space> :<C-u>CocList<cr>
