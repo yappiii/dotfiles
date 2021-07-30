@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@aws-amplify/cli": "^5.2.1",
-    "gtop": "^1.1.1"
+    "gtop": "^1.1.1",
+    "intelephense": "^1.7.1"
   }
 }
