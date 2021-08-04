@@ -76,6 +76,16 @@ colorscheme ayu
 highlight CocErrorSign ctermfg=15 ctermbg=196
 highlight CocWarningSign ctermfg=0 ctermbg=172
 let g:coc_node_path = "~/.anyenv/envs/nodenv/versions/16.0.0/bin/node"
+let g:coc_global_extensions = [
+\   'coc-lists'
+\   , 'coc-tsserver'
+\   , 'coc-json'
+\   , 'coc-css'
+\   , 'coc-tabnine'
+\   , 'coc-explorer'
+\   , 'coc-highlight'
+\   , 'coc-eslint'
+\   ]
 
 """ coc-list
 nmap <silent> <space><space> :<C-u>CocList<cr>
