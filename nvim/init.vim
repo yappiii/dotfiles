@@ -85,6 +85,7 @@ let g:coc_global_extensions = [
 \   , 'coc-explorer'
 \   , 'coc-highlight'
 \   , 'coc-eslint'
+\   , 'coc-prettier'
 \   ]
 
 """ coc-list
