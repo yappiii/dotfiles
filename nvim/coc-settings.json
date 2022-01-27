@@ -11,9 +11,9 @@
   },
   "tsserver.enableJavascript": true,
   "coc.preferences.rootPatterns": [".gitignore", ".env", ".git"],
-  "explorer.file.autoReveal": false,
+  "explorer.file.reveal.auto": false,
   "explorer.file.showHiddenFiles": true,
-  "explorer.icon.enableVimDevicons": true,
+  "explorer.icon.source": "vim-devicons",
   "explorer.icon.enableNerdfont": true,
   "explorer.width": 30
 }

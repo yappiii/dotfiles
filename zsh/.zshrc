@@ -5,6 +5,9 @@
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/dotfiles2/bin/node_modules/.bin
 export PATH=$PATH:$HOME/.anyenv/bin
+export PATH=$PATH:/opt/homebrew/bin
+export STARSHIP_CONFIG=~/.starship/config.toml
+
 
 # load prompt
 # autoload -U promptinit; promptinit
@@ -32,8 +35,14 @@ SAVEHIST=1000000
 setopt share_history
 
 # custom aliases
-alias ls='lsd'
+alias ls='exa'
 alias ll='ls -la'
+alias cat='bat'
+alias ps='procs'
+alias grep='rg'
+alias find='fd'
+alias od='hexyl'
+alias wc='tokei'
 
 eval "$(starship init zsh)"
 eval "$(anyenv init -)"
