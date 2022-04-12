@@ -88,6 +88,8 @@ let g:coc_global_extensions = [
 \   , 'coc-prettier'
 \   ]
 
+command! -nargs=0 Tsformat :call CocAction('format')
+
 """ coc-list
 nmap <silent> <space><space> :<C-u>CocList<cr>
 """ Hover
