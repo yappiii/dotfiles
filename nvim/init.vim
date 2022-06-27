@@ -56,11 +56,15 @@ if has('vim_starting') && dein#check_install()
 endif
 
 " node settings
-let g:node_host_prog = system('echo -n $(which neovim-node-host)')
+let g:node_host_prog = "/Users/t-yoneya/.anyenv/envs/nodenv/versions/16.0.0/lib/node_modules/neovim/bin/cli.js"
 "" tsxを開いた時のsyntax ruleを上書く
 au BufNewFile,BufRead *.tsx setf typescript.tsx
 "" 暫定対応
 au BufNewFile,BufRead let b:coc_root_patterns = ['.env']
+
+" python settings
+let g:python3_dir = '~/.anyenv/envs/pyenv/shims/'
+let g:python3_host_prog= g:python3_dir . 'python'
 
 " plugin dependencies
 
@@ -75,7 +79,7 @@ colorscheme ayu
 "" # coc-nvim
 highlight CocErrorSign ctermfg=15 ctermbg=196
 highlight CocWarningSign ctermfg=0 ctermbg=172
-let g:coc_node_path = "~/.anyenv/envs/nodenv/versions/16.0.0/bin/node"
+let g:coc_node_path = "/Users/t-yoneya/.anyenv/envs/nodenv/shims/node"
 let g:coc_global_extensions = [
 \   'coc-lists'
 \   , 'coc-tsserver'
@@ -86,6 +90,7 @@ let g:coc_global_extensions = [
 \   , 'coc-highlight'
 \   , 'coc-eslint'
 \   , 'coc-prettier'
+\   , 'coc-graphql'
 \   ]
 
 command! -nargs=0 Tsformat :call CocAction('format')
