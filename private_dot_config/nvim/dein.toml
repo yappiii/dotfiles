@@ -58,3 +58,9 @@ repo = 'dense-analysis/ale'
 
 [[plugins]]
 repo = 'github/copilot.vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'

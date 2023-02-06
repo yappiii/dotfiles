@@ -28,5 +28,13 @@
   "solargraph.commandPath": "/Users/takatsugu.yoneya/.anyenv/envs/rbenv/shims/solargraph",
   "solargraph.useBundler": false,
   "suggest.enablePreselect": true,
-  "tsserver.enableJavascript": true
+  "tsserver.enableJavascript": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "ruby",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "graphql"
+  ]
 }

@@ -128,6 +128,9 @@ function! CocJumpAction() abort
   return ChooseAction(actions)
 endfunction
 
+autocmd CursorHold * silent call CocActionAsync('highlight')
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
 nmap <silent> <space>j :<C-u>call CocActionAsync('jumpDefinition', CocJumpAction())<CR>
 """ References
 nmap <silent> <space>r :<C-u>call CocActionAsync('doReferences')<CR>
@@ -179,10 +182,9 @@ let g:ale_fixers = {
   \ 'ruby': ['rubocop']
   \ }
 
-"" 背景透過 - colorschemeに依存しているため、ここで実行
-hi! Normal ctermbg=NONE guibg=NONE
-hi! SpecialKey ctermbg=NONE guibg=NONE
-hi! EndOgBuffer ctermbg=NONE guibg=NONE
-hi! Statusline ctermbg=NONE guibg=NONE
-hi! StatuslineNC ctermbg=NONE guibg=NONE
-hi! SignColumn ctermbg=NONE guibg=NONE
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_statusline_ontop=0
+let g:airline_theme='simple'
+let g:airline#extensions#tabline#formatter = 'default'
