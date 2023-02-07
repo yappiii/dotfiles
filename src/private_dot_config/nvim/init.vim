@@ -80,8 +80,8 @@ let g:copilot#enable_on_startup = 1
 
 "" # ayu
 """ 背景透過用の設定
-set t_8f=^[[38;2;%lu;%lu;%lum
-set t_8b=^[[48;2;%lu;%lu;%lum
+" set t_8f=^[[38;2;%lu;%lu;%lum
+" set t_8b=^[[48;2;%lu;%lu;%lum
 set termguicolors
 let ayucolor="dark"
 colorscheme ayu

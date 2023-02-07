@@ -48,7 +48,7 @@ repo = 'skanehira/preview-uml.vim'
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
-repo = 'skanehira/preview-markdown.vim'
+repo = 'iamcco/markdown-preview.nvim'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
