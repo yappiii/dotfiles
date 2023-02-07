@@ -55,6 +55,9 @@ if has('vim_starting') && dein#check_install()
 	call dein#install()
 endif
 
+" lua plugins
+lua require('plugins')
+
 " node settings
 let g:node_host_prog = "/Users/takatsugu.yoneya/.anyenv/envs/nodenv/versions/18.0.0/bin/neovim-node-host"
 "" tsxを開いた時のsyntax ruleを上書く
@@ -153,7 +156,11 @@ nmap <silent> <space>z :<C-u>call CocAction('fold')<CR>
 """ FoldAll
 nmap <silent> <space>Z :<C-u>call CocAction('fold', 'all')<CR>
 
-""" explorer
+""" bufferを指定して移動
+nnoremap <silent> <space>bn :<C-u>bnext<CR>
+nnoremap <silent> <space>bp :<C-u>bprev<CR>
+
+""" coc-explorer
 let g:coc_explorer_global_presets = {
 \   'pwd': {
 \     'root-uri': getcwd(),
