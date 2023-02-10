@@ -1,5 +1,6 @@
 local options = {
   autoindent = true,
+  backup = false,
   clipboard = "unnamedplus",
   cmdheight = 2,
   diffopt = "filler,iwhite,internal,algorithm:patience",
@@ -14,8 +15,6 @@ local options = {
   incsearch = true,
   list = true,
   listchars = "tab:»·,trail:·,nbsp:·",
-  backup = false,
-  writebackup = false,
   number = true,
   shiftwidth = 2,
   shortmess = "aoOTIcF",
@@ -28,6 +27,7 @@ local options = {
   updatetime = 300,
   whichwrap = "b,s,<,>,[,],h,l",
   wrapscan = true,
+  writebackup = false,
 }
 local keymap = vim.api.nvim_set_keymap
 
