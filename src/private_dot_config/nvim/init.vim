@@ -1,42 +1,8 @@
-" init
-set autoindent
-set clipboard=unnamed
-set cmdheight=2
-set fenc=utf-8
-set diffopt=internal,filler,algorithm:histogram,indent-heuristic
-set encoding=utf-8
-set expandtab
-set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
-set hidden
-set hls
-set ignorecase
-set inccommand=split
-set list
-set listchars=tab:\▸\ ,eol:↲
-set nobackup
-set nowritebackup
-set number
-set shiftwidth=2
-set shortmess+=c
-set signcolumn=yes
-set smartcase
-set splitright
-set tabstop=2
-set updatetime=250
-set whichwrap+=h,l
-set wrapscan
+" core
+lua require('core')
 
-" emacs keybind
-imap <C-p> <Up>
-imap <C-n> <Down>
-imap <C-b> <Left>
-imap <C-f> <Right>
-imap <C-e> <End>
-imap <C-d> <Del>
-imap <C-h> <BS>
-
-" other custom keybind
-nnoremap ; :
+"" rubyのkeybind
+runtime! ./keymap/ruby.vim
 
 " dein settings
 if &compatible
@@ -82,7 +48,6 @@ let g:copilot#enable_on_startup = 1
 """ 背景透過用の設定
 " set t_8f=^[[38;2;%lu;%lu;%lum
 " set t_8b=^[[48;2;%lu;%lu;%lum
-set termguicolors
 let ayucolor="dark"
 colorscheme ayu
 
@@ -173,8 +138,6 @@ nmap <silent> <space>e :<C-u>CocCommand explorer --preset pwd<cr>
 filetype plugin indent on
 syntax enable
 
-"" rubyのkeybind
-runtime! ./keymap/ruby.vim
 
 "" preview-uml.vim
 let g:preview_uml_url='http://localhost:8888'
