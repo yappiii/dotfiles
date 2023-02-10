@@ -13,16 +13,6 @@ require("packer").startup(function(use)
   }}
 end)
 
-function _G.set_terminal_keymaps()
-  local ops = { buffer = 0 }
-  vim.api.nvim_buf_set_keymap('t', '<esc>', [[<C-\><C-n>]], ops)
-  vim.api.nvim_buf_set_keymap('t', 'jk', [[<C-\><C-n>]], ops)
-  vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
-  vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
-  vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
-  vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
-end
-
 local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({
 	cmd = "lazygit",

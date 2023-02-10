@@ -40,8 +40,8 @@ end
 -- keymaps
 keymap("n", ";", ":", { noremap = true })
 ---- emacs keybind
-keymap("n", "C-p", "<Up>", { noremap = true })
-keymap("n", "C-n", "<Down>", { noremap = true })
-keymap("n", "C-f", "<Right>", { noremap = true })
-keymap("n", "C-b", "<Left>", { noremap = true })
-keymap("n", "C-e", "<End>", { noremap = true })
+keymap("i", "<C-p>", "<Up>", { noremap = true })
+keymap("i", "<C-n>", "<Down>", { noremap = true })
+keymap("i", "<C-f>", "<Right>", { noremap = true })
+keymap("i", "<C-b>", "<Left>", { noremap = true })
+keymap("i", "<C-e>", "<End>", { noremap = true })
