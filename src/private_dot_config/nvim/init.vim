@@ -2,7 +2,7 @@
 lua require('core')
 
 "" rubyのkeybind
-runtime! ./keymap/ruby.vim
+"" runtime! ./keymap/ruby.vim
 
 " dein settings
 if &compatible
@@ -39,6 +39,9 @@ let g:ruby_host_prog = '/Users/takatsugu.yoneya/.anyenv/envs/rbenv/shims/neovim-
 " copilot settings
 let g:copilot#enable = 1
 let g:copilot#enable_on_startup = 1
+let g:copilot#no_tab_map = 1
+" copilotのfiletypeでrubyを有効にする
+let g:copilot#filetypes = ['ruby']
 
 "" ruby settings
 
