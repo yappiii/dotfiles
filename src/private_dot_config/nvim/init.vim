@@ -1,10 +1,3 @@
-" core
-lua require('core')
-
-"" rubyのkeybind
-"" runtime! ./keymap/ruby.vim
-
-" dein settings
 if &compatible
 	set nocompatible
 endif
@@ -21,44 +14,21 @@ if has('vim_starting') && dein#check_install()
 	call dein#install()
 endif
 
-" lua plugins
+lua require('anyenv')
+lua require('colorschema')
+lua require('core')
 lua require('plugins')
 
-" node settings
-let g:node_host_prog = "/Users/takatsugu.yoneya/.anyenv/envs/nodenv/versions/18.0.0/bin/neovim-node-host"
-"" tsxを開いた時のsyntax ruleを上書く
-au BufNewFile,BufRead *.tsx setf typescript.tsx
-"" 暫定対応
-au BufNewFile,BufRead let b:coc_root_patterns = ['.env']
-
-" python settings
-let g:python3_dir = '~/.anyenv/envs/pyenv/shims/'
-let g:python3_host_prog= g:python3_dir . 'python'
-let g:ruby_host_prog = '/Users/takatsugu.yoneya/.anyenv/envs/rbenv/shims/neovim-ruby-host'
-
-" copilot settings
+" copilotをluaに移行してからこちらも移行する
 let g:copilot#enable = 1
-let g:copilot#enable_on_startup = 1
-let g:copilot#no_tab_map = 1
-" copilotのfiletypeでrubyを有効にする
-let g:copilot#filetypes = ['ruby']
-
-"" ruby settings
-
-" plugin dependencies
-
-"" # ayu
-""" 背景透過用の設定
-" set t_8f=^[[38;2;%lu;%lu;%lum
-" set t_8b=^[[48;2;%lu;%lu;%lum
-let ayucolor="dark"
-colorscheme ayu
+let g:copilot#enable_at_startup = 1
+let g:copilot#no_tab_maps = 1
 
 "" # coc-nvim
 highlight CocErrorSign ctermfg=15 ctermbg=196
 highlight CocWarningSign ctermfg=0 ctermbg=172
-let g:coc_node_path = "/Users/takatsugu.yoneya/.anyenv/envs/nodenv/shims/node"
-let g:coc_ruby_path = "/Users/takatsugu.yoneya/.anyenv/envs/rbenv/shims/ruby"
+let g:coc_node_path = "~/.anyenv/envs/nodenv/shims/node"
+let g:coc_ruby_path = "~/.anyenv/envs/rbenv/shims/ruby"
 let g:coc_global_extensions = [
 \   'coc-css'
 \   , 'coc-eslint'
@@ -141,7 +111,6 @@ nmap <silent> <space>e :<C-u>CocCommand explorer --preset pwd<cr>
 filetype plugin indent on
 syntax enable
 
-
 "" preview-uml.vim
 let g:preview_uml_url='http://localhost:8888'
 
@@ -154,10 +123,3 @@ let g:ale_lint_on_text_changed = 1
 let g:ale_fixers = {
   \ 'ruby': ['rubocop']
   \ }
-
-set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_statusline_ontop=0
-let g:airline_theme='simple'
-let g:airline#extensions#tabline#formatter = 'default'
