@@ -27,14 +27,13 @@ let g:copilot#no_tab_maps = 1
 "" # coc-nvim
 highlight CocErrorSign ctermfg=15 ctermbg=196
 highlight CocWarningSign ctermfg=0 ctermbg=172
-let g:coc_node_path = "~/.anyenv/envs/nodenv/shims/node"
-let g:coc_ruby_path = "~/.anyenv/envs/rbenv/shims/ruby"
+let g:coc_node_path = trim(system('which node'))
+let g:coc_ruby_path = trim(system('which ruby'))
 let g:coc_global_extensions = [
 \   'coc-css'
 \   , 'coc-eslint'
 \   , 'coc-explorer'
 \   , 'coc-go'
-\   , 'coc-git'
 \   , 'coc-graphql'
 \   , 'coc-highlight'
 \   , 'coc-json'
@@ -110,12 +109,6 @@ nmap <silent> <space>e :<C-u>CocCommand explorer --preset pwd<cr>
 
 filetype plugin indent on
 syntax enable
-
-"" preview-uml.vim
-let g:preview_uml_url='http://localhost:8888'
-
-"" preview-markdown.vim
-let g:preview_markdown_vertical = 1
 
 "" ale
 let g:ale_disable_lsp = 1

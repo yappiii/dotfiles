@@ -41,4 +41,4 @@ packer.startup(function(use)
   end
 end)
 
-require("plugins/toggleterm")
+require("plugins.toggleterm")
