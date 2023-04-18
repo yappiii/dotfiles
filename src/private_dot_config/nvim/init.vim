@@ -15,7 +15,7 @@ if has('vim_starting') && dein#check_install()
 endif
 
 lua require('anyenv')
-lua require('colorschema')
+lua require('colorscheme')
 lua require('core')
 lua require('plugins')
 
