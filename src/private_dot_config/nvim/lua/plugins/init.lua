@@ -29,7 +29,9 @@ packer.init({
 })
 
 packer.startup(function(use)
-  use({ "akinsho/toggleterm.nvim", config = require("plugins.config.toggleterm") })
+  use({ "akinsho/toggleterm.nvim", config = function()
+    require("plugins.config.toggleterm")
+  end })
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
   use({ "nvim-tree/nvim-web-devicons" })
   use({ "rebelot/kanagawa.nvim" })
@@ -41,4 +43,4 @@ packer.startup(function(use)
   end
 end)
 
-require("plugins.toggleterm")
+require("plugins/toggleterm")
