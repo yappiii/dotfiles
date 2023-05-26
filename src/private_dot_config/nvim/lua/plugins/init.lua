@@ -35,6 +35,7 @@ packer.startup(function(use)
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
   use({ "nvim-tree/nvim-web-devicons" })
   use({ "rebelot/kanagawa.nvim" })
+  use({ "catppuccin/nvim", as = "catppuccin" })
   use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons"})
   use({ "wbthomason/packer.nvim" })
 
