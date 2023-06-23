@@ -1,0 +1,4 @@
+registries:
+  - type: standard
+packages:
+  - registry: standard

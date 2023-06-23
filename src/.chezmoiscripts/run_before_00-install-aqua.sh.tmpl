@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+if [ "$(command -v aqua)" ]; then
+  aqua=aqua
+else
+  URL=https://raw.githubusercontent.com/aquaproj/aqua-installer/v1.0.0/aqua-installer
+  mkdir -p ~/.local/bin
+  aqua=~/.local/bin/aqua
+  if [ "$(command -v curl)" ]; then
+    sh -c "$(curl -fsSL $URL)" -- -i $aqua
+  elif [ "$(command -v wget)" ]; then
+    sh -c "$(wget -qO- $URL)" -- -i $aqua
+  else
+    echo "You must have curl or wget installed." >&2
+    exit 1
+  fi
+fi
+
+export AQUA_POLICY_CONFIG={{ .chezmoi.sourceDir }}/private_dot_config/aquaproj-aqua/policy.yaml
+exec "$aqua" -c {{ .chezmoi.sourceDir }}/private_dot_config/aquaproj-aqua/aqua.yaml i

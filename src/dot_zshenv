@@ -1,0 +1,8 @@
+path=(
+  ~/.local/bin(N-/)
+  $HOME/.local/share/aquaproj-aqua/bin(N-/)
+  $path
+)
+
+export AQUA_GLOBAL_CONFIG=$HOME/.config/aquaproj-aqua/aqua.yaml
+export AQUA_POLICY_CONFIG=$HOME/.config/aquaproj-aqua/policy.yaml
