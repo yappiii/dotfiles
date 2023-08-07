@@ -1,0 +1,4 @@
+[submodule "src/private_dot_config/nvim"]
+	path = src/private_dot_config/nvim
+	url = git@github.com:NvChad/NvChad
+	branch = main
