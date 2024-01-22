@@ -5,56 +5,8 @@ repo = 'Shougo/dein.vim'
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
-repo = 'ayu-theme/ayu-vim'
-
-[[plugins]]
-repo = 'roxma/nvim-yarp'
-
-[[plugins]]
 repo = 'cespare/vim-toml'
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-[[plugins]]
-repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-depends = 'fzf'
-
-[[plugins]]
-repo = 'junegunn/fzf'
-build = './install --bin'
-merged = 0
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'tbodt/deoplete-tabnine'
-
-[[plugins]]
-repo = 'segeljakt/vim-silicon'
-
-[[plugins]]
-repo = 'skanehira/preview-uml.vim'
-
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
-repo = 'iamcco/markdown-preview.nvim'
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
-repo = 'dense-analysis/ale'
-
-[[plugins]]
-repo = 'github/copilot.vim'

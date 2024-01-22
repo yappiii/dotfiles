@@ -37,6 +37,13 @@ packer.startup(function(use)
   use({ "rebelot/kanagawa.nvim" })
   use({ "catppuccin/nvim", as = "catppuccin" })
   use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons"})
+  use({ "airblade/vim-gitgutter" })
+  use({ "editorconfig/editorconfig-vim" })
+  use({ "junegunn/fzf", run = "./install --all" })
+  use({ "tpope/vim-fugitive" })
+  use({ "segeljakt/vim-silicon" })
+  use({ "ryanoasis/vim-devicons" })
+  use({ "github/copilot.vim", run = "cargo build --release" })
   use({ "wbthomason/packer.nvim" })
 
   if PACKER_BOOTSTRAP then

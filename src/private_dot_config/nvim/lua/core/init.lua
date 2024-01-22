@@ -45,3 +45,8 @@ keymap("i", "<C-n>", "<Down>", { noremap = true })
 keymap("i", "<C-f>", "<Right>", { noremap = true })
 keymap("i", "<C-b>", "<Left>", { noremap = true })
 keymap("i", "<C-e>", "<End>", { noremap = true })
+
+-- transparent background
+vim.opt.termguicolors = true
+vim.opt.winblend = 0 -- ウィンドウの不透明度
+vim.opt.pumblend = 0 -- ポップアップメニューの不透明度
