@@ -1,3 +1,4 @@
+-- toggleterm uses the lazygit command to open a floating terminal window. The following snippet from init.lua configures the keybinding <C-g> to open the lazygit terminal:
 local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({
 	cmd = "lazygit",
