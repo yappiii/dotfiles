@@ -15,7 +15,6 @@ if has('vim_starting') && dein#check_install()
 endif
 
 lua require('anyenv')
-lua require('colorscheme')
 lua require('core')
 lua require('plugins')
 
@@ -32,7 +31,6 @@ let g:coc_ruby_path = trim(system('which ruby'))
 let g:coc_global_extensions = [
 \   'coc-css'
 \   , 'coc-eslint'
-\   , 'coc-explorer'
 \   , 'coc-go'
 \   , 'coc-graphql'
 \   , 'coc-highlight'
@@ -96,16 +94,6 @@ nmap <silent> <space>Z :<C-u>call CocAction('fold', 'all')<CR>
 """ bufferを指定して移動
 nnoremap <silent> <space>bn :<C-u>bnext<CR>
 nnoremap <silent> <space>bp :<C-u>bprev<CR>
-
-""" coc-explorer
-let g:coc_explorer_global_presets = {
-\   'pwd': {
-\     'root-uri': getcwd(),
-\   },
-\ }
-
-""" coc-explorer
-nmap <silent> <space>e :<C-u>CocCommand explorer --preset pwd<cr>
 
 filetype plugin indent on
 syntax enable
