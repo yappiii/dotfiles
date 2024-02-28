@@ -1,3 +1,4 @@
+---
 git:
   parseEmoji: true
 
@@ -8,31 +9,6 @@ os:
   editPreset: "nvim"
 
 customCommands:
-  - key: 'C'
-    command: "git commit --no-verify"
-    context: 'files'
-    subprocess: true
-    description: 'commit changes using git editor(Custom Command)'
-  - key: 'n'
-    context: 'localBranches'
-    prompts:
-      - type: 'menu'
-        title: 'What kind of branch is it?'
-        key: 'BranchType'
-        options:
-          - name: 'feature'
-            description: 'a feature branch'
-            value: 'feature'
-          - name: 'hotfix'
-            description: 'a hotfix branch'
-            value: 'hotfix'
-          - name: 'release'
-            description: 'a release branch'
-            value: 'release'
-      - type: 'input'
-        title: 'What is the new branch name?'
-        key: 'BranchName'
-        initialValue: ''
   - key: "c"
     context: "files"
     description: 'commit files with format'
