@@ -31,6 +31,7 @@ local options = {
 }
 local keymap = vim.api.nvim_set_keymap
 
+vim.g.mapleader = ' '
 vim.opt.shortmess:append("c")
 
 for k, v in pairs(options) do
