@@ -46,6 +46,16 @@ keymap("i", "<C-f>", "<Right>", { noremap = true })
 keymap("i", "<C-b>", "<Left>", { noremap = true })
 keymap("i", "<C-e>", "<End>", { noremap = true })
 
+vim.opt.list = true
+vim.opt.listchars = {
+	tab = '│·',
+	extends = '⟩',
+	precedes = '⟨',
+	trail = '·',
+	eol = '↴',
+	nbsp = '%'
+}
+
 -- transparent background
 vim.opt.termguicolors = true
 vim.opt.winblend = 0 -- ウィンドウの不透明度
