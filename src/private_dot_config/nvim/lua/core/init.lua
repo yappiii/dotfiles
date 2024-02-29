@@ -50,8 +50,3 @@ keymap("i", "<C-e>", "<End>", { noremap = true })
 vim.opt.termguicolors = true
 vim.opt.winblend = 0 -- ウィンドウの不透明度
 vim.opt.pumblend = 0 -- ポップアップメニューの不透明度
-
--- copilot
-vim.g['copilot#enable']= 1
-vim.g['copilot#enable_at_startup']= 1
-vim.g['copilot#no_tab_maps']= 1
