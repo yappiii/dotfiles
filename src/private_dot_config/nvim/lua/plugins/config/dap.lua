@@ -1,0 +1,5 @@
+vim.api.nvim_set_keymap("n", "5", ":lua require('dap').continue()<CR>", { silent = true})
+vim.api.nvim_set_keymap("n", "6", ":lua require('dap').step_over()<CR>", { silent = true})
+vim.api.nvim_set_keymap("n", "7", ":lua require('dap').step_into()<CR>", { silent = true})
+vim.api.nvim_set_keymap("n", "8", ":lua require('dap').step_out()<CR>", { silent = true})
+vim.api.nvim_set_keymap("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>", { silent = true})
