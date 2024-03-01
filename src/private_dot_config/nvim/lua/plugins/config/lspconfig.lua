@@ -1,3 +1,5 @@
+local lspconfig = require 'lspconfig'
+local configs = require 'lspconfig/configs'
 local on_attach = function(client, bufnr)
   vim.api.nvim_set_keymap("n", "gd", vim.lsp.buf.definition, {
     noremap = true,
@@ -15,7 +17,7 @@ local on_attach = function(client, bufnr)
   })
 end
 
-require("lspconfig").gopls.setup({
+lspconfig.gopls.setup({
   cmd = {
     "gopls",
     "serve"
@@ -31,10 +33,25 @@ require("lspconfig").gopls.setup({
   }
 })
 
-require("lspconfig").tsserver.setup({
+lspconfig.tsserver.setup({
   on_attach = on_attach
 })
 
-require("lspconfig").vimls.setup({
+lspconfig.vimls.setup({
   on_attach = on_attach
 })
+
+if not configs.golangcilsp then
+ 	configs.golangcilsp = {
+		default_config = {
+			cmd = {'golangci-lint-langserver'},
+			root_dir = lspconfig.util.root_pattern('.git', 'go.mod'),
+			init_options = {
+					command = { "golangci-lint", "run", "-j", "10", "./...", "--timeout=5m" };
+			}
+		};
+	}
+end
+lspconfig.golangci_lint_ls.setup {
+	filetypes = {'go','gomod'}
+}
