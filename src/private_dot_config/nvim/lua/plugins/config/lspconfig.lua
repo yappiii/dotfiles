@@ -47,7 +47,7 @@ if not configs.golangcilsp then
 			cmd = {'golangci-lint-langserver'},
 			root_dir = lspconfig.util.root_pattern('.git', 'go.mod'),
 			init_options = {
-					command = { "golangci-lint", "run", "-j", "10", "./...", "--timeout=5m" };
+					command = { "golangci-lint", "run", "-v", "./..." };
 			}
 		};
 	}
