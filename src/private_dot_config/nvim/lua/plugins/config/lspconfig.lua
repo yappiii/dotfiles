@@ -41,6 +41,10 @@ lspconfig.vimls.setup({
   on_attach = on_attach
 })
 
+lspconfig.rubocop.setup({
+  on_attach = on_attach,
+})
+
 if not configs.golangcilsp then
  	configs.golangcilsp = {
 		default_config = {
