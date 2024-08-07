@@ -8,6 +8,13 @@ require("nvim-tree").setup({
   renderer = {
     group_empty = true,
   },
+  filters = {
+    git_ignored = false,
+    custom = {
+      "^\\.git",
+      "^node_modules",
+    },
+  },
 })
 
 vim.api.nvim_set_keymap("n", "<C-e>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
