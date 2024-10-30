@@ -17,6 +17,7 @@ local on_attach = function(client, bufnr)
   })
 end
 
+-- gopls
 lspconfig.gopls.setup({
   cmd = {
     "gopls",
@@ -59,3 +60,11 @@ end
 lspconfig.golangci_lint_ls.setup {
 	filetypes = {'go','gomod'}
 }
+
+-- terraform
+lspconfig.terraformls.setup{}
+
+-- ruby
+lspconfig.solargraph.setup({
+  on_attach = on_attach
+})
