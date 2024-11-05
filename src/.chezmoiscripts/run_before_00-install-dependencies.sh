@@ -33,6 +33,3 @@ python -m pip install awscli
 
 # neovim
 python -m pip install neovim
-
-# gcloud cli
-curl https://sdk.cloud.google.com | bash
