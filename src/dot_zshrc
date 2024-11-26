@@ -6,7 +6,9 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.anyenv/bin
 export PATH=$PATH:/opt/homebrew/bin
 export STARSHIP_CONFIG=~/.starship/config.toml
-
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH="/opt/homebrew/opt/go/bin:$PATH"
 
 # load prompt
 # autoload -U promptinit; promptinit
@@ -37,13 +39,11 @@ eval "$(starship init zsh)"
 eval "$(anyenv init -)"
 eval "$(nodenv init -)"
 eval "$(pyenv init -)"
-eval "$(rbenv init -)"
-# pyenv use LDFLAGS "-L/usr/local/opt/zlib/lib"
-# rbenv use LDFLAGS "LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 
 # docker aliases
