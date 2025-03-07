@@ -58,7 +58,6 @@ packer.startup(function(use)
   use({ "sindrets/diffview.nvim", config = function() require("plugins.config.diffview") end })
   use({ "segeljakt/vim-silicon" })
   use({ "kylechui/nvim-surround", config = function() require("plugins.config.surround") end })
-  use({ "m4xshen/autoclose.nvim" })
   use({ "tpope/vim-fugitive" })
   use({ "wbthomason/packer.nvim" })
 
