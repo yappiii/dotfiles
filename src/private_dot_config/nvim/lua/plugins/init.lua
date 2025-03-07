@@ -57,6 +57,7 @@ packer.startup(function(use)
   use({ "saadparwaiz1/cmp_luasnip" })
   use({ "sindrets/diffview.nvim", config = function() require("plugins.config.diffview") end })
   use({ "segeljakt/vim-silicon" })
+  use({ "kylechui/nvim-surround", config = function() require("pugins.config.surround") end })
   use({ "tpope/vim-fugitive" })
   use({ "wbthomason/packer.nvim" })
 
