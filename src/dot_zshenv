@@ -4,5 +4,5 @@ path=(
   $path
 )
 
-export AQUA_GLOBAL_CONFIG=$HOME/.config/aquaproj-aqua/aqua.yaml
-export AQUA_POLICY_CONFIG=$HOME/.config/aquaproj-aqua/policy.yaml
+export AQUA_GLOBAL_CONFIG="$HOME/.local/share/chezmoi/src/private_dot_config/aquaproj-aqua/aqua.yaml"
+export AQUA_GLOBAL_CONFIG="$HOME/.local/share/chezmoi/src/private_dot_config/aquaproj-aqua/policy.yaml"
