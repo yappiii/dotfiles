@@ -56,3 +56,7 @@ alias gitbranchd='git branch | peco | awk "{print \$1}" | xargs git branch -D'
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+for f in "$HOME/.zshrc.d/"*; do
+  [ -r "$f" ] && [ -f "$f" ] && source "$f"
+done
