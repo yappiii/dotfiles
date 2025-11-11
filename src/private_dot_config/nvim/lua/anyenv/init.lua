@@ -1,6 +1,3 @@
--- node
-vim.g.node_host_prog = "~/.anyenv/envs/nodenv/versions/18.0.0/bin/neovim-node-host"
-
 vim.cmd [[
 au BufNewFile,BufRead *.tsx setf typescript.tsx
 au BufNewFile,BufRead let b:coc_root_patterns = ['.env']
