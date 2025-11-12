@@ -1,11 +1,12 @@
 # dependencies
-## phpbrew
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
-## nodebrew
+## env
+export PATH=$NPM_CONFIG_PREFIX:$PATH
+export STARSHIP_CONFIG=~/.starship/config.toml
+
+## nodebrew(deprecated)
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.anyenv/bin
 export PATH=$PATH:/opt/homebrew/bin
-export STARSHIP_CONFIG=~/.starship/config.toml
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="/opt/homebrew/opt/go/bin:$PATH"

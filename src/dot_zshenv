@@ -6,3 +6,4 @@ path=(
 
 export AQUA_GLOBAL_CONFIG="$HOME/.local/share/chezmoi/src/private_dot_config/aquaproj-aqua/aqua.yaml"
 export AQUA_GLOBAL_CONFIG="$HOME/.local/share/chezmoi/src/private_dot_config/aquaproj-aqua/policy.yaml"
+export NPM_CONFIG_PREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/npm-global"
