@@ -1,11 +1,9 @@
 # dependencies
 ## env
-export PATH=$NPM_CONFIG_PREFIX:$PATH
 export STARSHIP_CONFIG=~/.starship/config.toml
+export PATH=$NPM_CONFIG_PREFIX:$PATH
 
-## nodebrew(deprecated)
 export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/.anyenv/bin
 export PATH=$PATH:/opt/homebrew/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -40,7 +38,6 @@ eval "$(starship init zsh)"
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
-export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(direnv hook zsh)"
 
 # docker aliases
@@ -49,11 +46,11 @@ alias dockerstop='docker ps | peco | awk "{print \$1}" | xargs docker stop'
 alias gitcheckout='git branch | peco | awk "{print \$1}" | xargs git checkout'
 alias gitbranchd='git branch | peco | awk "{print \$1}" | xargs git branch -D'
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 for f in "$HOME/.zshrc.d/"*; do
   [ -r "$f" ] && [ -f "$f" ] && source "$f"
 done
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
