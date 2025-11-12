@@ -9,5 +9,6 @@ packages:
 - name: direnv/direnv@v2.32.3
 - name: golang/go@1.25.4
 - name: junegunn/fzf@v0.66.1
+# - name: neovim/neovim@0.11.5
 - name: nodejs/node@v24.11.1
 - name: stedolan/jq@jq-1.6
