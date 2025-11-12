@@ -37,14 +37,10 @@ SAVEHIST=1000000
 setopt share_history
 
 eval "$(starship init zsh)"
-eval "$(anyenv init -)"
-eval "$(nodenv init -)"
-eval "$(pyenv init -)"
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 
 # docker aliases
