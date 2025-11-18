@@ -9,3 +9,5 @@ packages:
 - name: jdx/mise@v2025.11.1
 - name: junegunn/fzf@v0.66.1
 - name: stedolan/jq@jq-1.6
+- name: BurntSushi/ripgrep@15.1.0
+- name: jesseduffield/lazygit@v0.56.0
