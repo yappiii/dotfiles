@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 tap "universal-ctags/universal-ctags"
-brew "anyenv"
 brew "aws-vault"
 brew "awscli"
 brew "bat"
