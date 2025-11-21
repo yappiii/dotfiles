@@ -59,6 +59,7 @@ packer.startup(function(use)
   use({ "kylechui/nvim-surround", config = function() require("plugins.config.surround") end })
   use({ "tpope/vim-fugitive" })
   use({ "wbthomason/packer.nvim" })
+  use({ "coder/claudecode.nvim", requires = { "folke/snacks.nvim" }, config = function() require("plugins.config.claude") end })
 
   if PACKER_BOOTSTRAP then
     require('packer').sync()
