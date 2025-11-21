@@ -1,5 +1,3 @@
-local lspconfig = require 'lspconfig'
-local configs = require 'lspconfig/configs'
 local on_attach = function(client, bufnr)
   vim.api.nvim_set_keymap("n", "gd", vim.lsp.buf.definition, {
     noremap = true,
@@ -17,54 +15,25 @@ local on_attach = function(client, bufnr)
   })
 end
 
--- gopls
-lspconfig.gopls.setup({
+vim.lsp.config('*', {
+  on_attach = on_attach,
+  capabilities = require('cmp_nvim_lsp').default_capabilities()
+})
+vim.lsp.config('gopls', {
   cmd = {
     "gopls",
     "serve"
-  },
-  on_attach = on_attach,
-  settings = {
-    gopls = {
-      analyses = {
-        unusedparams = true
-      },
-      staticcheck = true
-    }
   }
 })
-
-lspconfig.ts_ls.setup({
-  on_attach = on_attach
+vim.lsp.config('golangci_lint_ls', {
+  filetypes = {'go', 'gomod'}
 })
 
-lspconfig.vimls.setup({
-  on_attach = on_attach
-})
-
-lspconfig.rubocop.setup({
-  on_attach = on_attach,
-})
-
-if not configs.golangcilsp then
-  configs.golangcilsp = {
-    default_config = {
-      cmd = {'golangci-lint-langserver'},
-      root_dir = lspconfig.util.root_pattern('.git', 'go.mod'),
-      init_options = {
-        command = { "golangci-lint", "run", "-v", "./..." };
-      }
-    };
-  }
-end
-lspconfig.golangci_lint_ls.setup {
-	filetypes = {'go','gomod'}
-}
-
--- terraform
-lspconfig.terraformls.setup{}
-
--- ruby
-lspconfig.solargraph.setup({
-  on_attach = on_attach
-})
+-- gopls
+vim.lsp.enable("gopls")
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("vimls")
+vim.lsp.enable("rubocop")
+vim.lsp.enable("golangci_lint_ls")
+vim.lsp.enable("terraformls")
+vim.lsp.enable("solargraph")
