@@ -1,27 +1,42 @@
-local on_attach = function(client, bufnr)
-  print("LSP attached: " .. client.name)
-
-  vim.keymap.set("n", "gd", vim.lsp.buf.definition, {
-    noremap = true,
-    silent = true
-  })
-  vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {
-    noremap = true,
-    silent = true
-  })
-  local group = vim.api.nvim_create_augroup("LspFormatOnSave", { clear = false })
-  vim.api.nvim_create_autocmd("BufWritePre", {
-    group = group,
-    buffer = bufnr,
-    callback = function()
-      vim.lsp.buf.format { async = false }
-    end,
-  })
-end
-
 vim.lsp.config('*', {
   on_attach = on_attach,
   capabilities = require('cmp_nvim_lsp').default_capabilities()
+})
+
+local group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true })
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = group,
+  callback = function(args)
+    local bufnr = args.buf
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+    -- デバッグ用
+    print(("LSP attached: %s (bufnr=%d)"):format(client.name, bufnr))
+
+    -- buffer ローカルマップ用ヘルパー
+    local function bufmap(mode, lhs, rhs)
+      vim.keymap.set(mode, lhs, rhs, {
+        noremap = true,
+        silent = true,
+        buffer = bufnr,
+      })
+    end
+
+    -- 定義ジャンプ
+    bufmap("n", "gd", vim.lsp.buf.definition)
+    bufmap("n", "gD", vim.lsp.buf.declaration)
+
+    -- 保存時フォーマット
+    local fmt_group = vim.api.nvim_create_augroup("LspFormatOnSave", { clear = false })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = fmt_group,
+      buffer = bufnr,
+      callback = function()
+        vim.lsp.buf.format { async = false }
+      end,
+    })
+  end,
 })
 
 vim.lsp.config('gopls', {
