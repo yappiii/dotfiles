@@ -37,10 +37,22 @@ vim.lsp.config('gopls', {
   }
 })
 
--- gopls
-vim.lsp.enable("gopls")
-vim.lsp.enable("ts_ls")
-vim.lsp.enable("vimls")
-vim.lsp.enable("rubocop")
-vim.lsp.enable("terraformls")
-vim.lsp.enable("solargraph")
+vim.lsp.config('basedpyright', {
+  cmd = { 'basedpyright-langserver', '--stdio' },
+  filetypes = { 'python' },
+  root_markers = {
+    'pyproject.toml',
+    'setup.py',
+    'setup.cfg',
+    'requirements.txt',
+    '.git',
+  }
+})
+
+vim.lsp.enable('gopls')
+vim.lsp.enable('basedpyright')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('vimls')
+vim.lsp.enable('rubocop')
+vim.lsp.enable('terraformls')
+vim.lsp.enable('solargraph')
