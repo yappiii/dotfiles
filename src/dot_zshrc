@@ -24,6 +24,17 @@ setopt auto_menu
 # easy cd
 setopt auto_cd
 
+# key bind
+bindkey -v
+
+# ECSの待ち時間
+KEYTIMEOUT=10
+
+# Backspace の挙動を「何でも消す」vimっぽい動作に変更
+# 端末によって Backspace が ^H or ^? どちらかになるので両方
+bindkey '^H' backward-delete-char
+bindkey '^?' backward-delete-char
+
 # history
 export LANG=ja_JP.UTF-8
 HISTFILE=$HOME/.zsh-history
