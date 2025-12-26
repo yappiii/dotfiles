@@ -5,12 +5,14 @@ go = "1.25.4"
 neovim = "0.11.5"
 python = "3.13.4"
 uv = "0.9.8"
+rust = "1.92.0"
 "go:golang.org/x/tools/gopls" = "0.20.0"
 "go:github.com/nametake/golangci-lint-langserver" = "0.0.10"
 "go:golang.org/x/tools/cmd/goimports" = "0.30.0"
 "go:github.com/terraform-linters/tflint" = "0.60.0"
 "pipx:basedpyright" = "latest"
 "npm:@openai/codex" = "latest"
+"cargo:sharkdp/fd" = "latest"
 
 [env]
 _.path = [
