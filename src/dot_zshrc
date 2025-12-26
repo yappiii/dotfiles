@@ -59,9 +59,12 @@ alias gitbranchd='git branch | peco | awk "{print \$1}" | xargs git branch -D'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-for f in "$HOME/.zshrc.d/"*; do
-  [ -r "$f" ] && [ -f "$f" ] && source "$f"
-done
+if [ -d "$HOME/.zshrc.d" ]; then
+  for conf in "$HOME/.zshrc.d/"*.zsh; do
+    [ -e "$conf" ] || break
+    source "${conf}"
+  done
+fi
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
