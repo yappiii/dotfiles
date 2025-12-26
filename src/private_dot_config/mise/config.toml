@@ -10,6 +10,7 @@ uv = "0.9.8"
 "go:golang.org/x/tools/cmd/goimports" = "0.30.0"
 "go:github.com/terraform-linters/tflint" = "0.60.0"
 "pipx:basedpyright" = "latest"
+"npm:@openai/codex" = "latest"
 
 [env]
 _.path = [
