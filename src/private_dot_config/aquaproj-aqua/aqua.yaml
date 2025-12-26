@@ -9,6 +9,6 @@ packages:
 - name: direnv/direnv@v2.37.1
 - name: jdx/mise@v2025.11.1
 - name: jesseduffield/lazygit@v0.56.0
-- name: junegunn/fzf@v0.66.1
+- name: junegunn/fzf@v0.67.0
 - name: peco/peco@v0.5.11
 - name: stedolan/jq@jq-1.6
