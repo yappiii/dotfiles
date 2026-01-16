@@ -27,16 +27,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     bufmap("n", "gd", vim.lsp.buf.definition)
     bufmap("n", "gD", vim.lsp.buf.declaration)
 
-    -- 保存時フォーマット
-    local fmt_group = vim.api.nvim_create_augroup("LspFormatOnSave", { clear = false })
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = fmt_group,
-      buffer = bufnr,
-      callback = function()
-        vim.lsp.buf.format { async = false }
-      end,
-    })
-
     -- 浮遊ウィンドウ
     vim.api.nvim_create_autocmd("CursorHold", {
       buffer = bufnr,
