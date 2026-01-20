@@ -10,11 +10,16 @@ rust = "1.92.0"
 "go:github.com/nametake/golangci-lint-langserver" = "0.0.10"
 "go:golang.org/x/tools/cmd/goimports" = "0.30.0"
 "go:github.com/terraform-linters/tflint" = "0.60.0"
+"aqua:99designs/aws-vault" = "latest"
+"aqua:BurntSushi/ripgrep" = "15.1.0"
+"aqua:aws/aws-cli" = "2.7.22"
+"aqua:cli/cli" = "2.2.0"
+"aqua:direnv/direnv" = "2.37.1"
+"aqua:jesseduffield/lazygit" = "0.56.0"
+"aqua:junegunn/fzf" = "0.67.0"
+"aqua:peco/peco" = "0.5.11"
+"aqua:jqlang/jq" = "1.8.1"
+"aqua:starship/starship" = "1.24.0"
 "pipx:basedpyright" = "latest"
 "npm:@openai/codex" = "latest"
 "cargo:sharkdp/fd" = "latest"
-
-[env]
-_.path = [
-  "~/.local/share/aquaproj-aqua/bin"
-]
