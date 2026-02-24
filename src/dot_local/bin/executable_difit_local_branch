@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+list_local_branches() {
+  # ローカルブランチのみ
+  git for-each-ref --format='%(refname:short)' refs/heads | sort -u
+}
+
+pick_one() {
+  local prompt="$1"
+  list_local_branches | peco --prompt="${prompt} > "
+}
+
+git rev-parse --is-inside-work-tree >/dev/null 2>&1 || {
+  echo "Not inside a git repository." >&2
+  exit 1
+}
+
+base="$(pick_one 'BASE (from)')"
+[[ -n "${base:-}" ]] || { echo "No base selected." >&2; exit 1; }
+
+target="$(
+  list_local_branches \
+    | grep -vFx "$base" \
+    | peco --prompt="TARGET (to) [$base -> ] > "
+)"
+[[ -n "${target:-}" ]] || { echo "No target selected." >&2; exit 1; }
+
+git diff --patch "${base}..${target}" | npx difit
