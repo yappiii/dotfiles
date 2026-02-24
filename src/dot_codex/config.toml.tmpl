@@ -1,0 +1,26 @@
+{{- $dst := joinPath .chezmoi.homeDir ".codex" "config.toml" -}}
+{{- $existing := dict -}}
+{{- if (stat $dst) -}}
+  {{- $existing = (include $dst | fromToml) -}}
+{{- end -}}
+{{- $projects := (get $existing "projects" | default (dict)) -}}
+
+model = "gpt-5.2-codex"
+model_reasoning_effort = "medium"
+network_access = true
+approval_policy = "on-request"
+
+[features]
+web_search_request = true
+
+[mcp_servers.notion]
+command = "npx"
+args    = ["-y", "mcp-remote", "https://mcp.notion.com/mcp"]
+
+{{- range $path, $cfg := $projects }}
+[projects.{{ printf "%q" $path }}]
+{{- range $k, $v := $cfg }}
+{{ $k }} = {{ $v | toJson }}
+{{- end }}
+
+{{- end }}
