@@ -1,0 +1,7 @@
+# Ignore All
+*
+!*/
+
+# Allowlist
+!.gitignore
+!executable_difit_local_branch
