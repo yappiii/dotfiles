@@ -3,15 +3,57 @@
 {{- if (stat $dst) -}}
   {{- $existing = (include $dst | fromToml) -}}
 {{- end -}}
+{{- $model := (get $existing "model" | default "gpt-5.2-codex") -}}
+{{- $modelReasoningEffort := (get $existing "model_reasoning_effort" | default "medium") -}}
+{{- $networkAccess := (get $existing "network_access" | default true) -}}
+{{- $approvalPolicy := (get $existing "approval_policy" | default "on-request") -}}
+{{- $features := (get $existing "features" | default (dict)) -}}
+{{- $mcpServers := (get $existing "mcp_servers" | default (dict)) -}}
 {{- $projects := (get $existing "projects" | default (dict)) -}}
+{{- $plugins := (get $existing "plugins" | default (dict)) -}}
 
-model = "gpt-5.2-codex"
-model_reasoning_effort = "medium"
-network_access = true
-approval_policy = "on-request"
+model = {{ $model | toJson }}
+model_reasoning_effort = {{ $modelReasoningEffort | toJson }}
+network_access = {{ $networkAccess | toJson }}
+approval_policy = {{ $approvalPolicy | toJson }}
 
 [features]
 web_search_request = true
+experimental_use_rmcp_client = true
+{{- range $k, $v := $features }}
+{{- if and (ne $k "web_search_request") (ne $k "experimental_use_rmcp_client") }}
+{{ $k }} = {{ $v | toJson }}
+{{- end }}
+{{- end }}
+
+[mcp_servers.github]
+url = "https://api.githubcopilot.com/mcp"
+bearer_token_env_var = "GITHUB_TOKEN"
+http_headers = { "X-MCP-Lockdown" = "true" }
+
+[mcp_servers.linear]
+url = "https://mcp.linear.app/mcp"
+
+[mcp_servers.notion]
+url = "https://mcp.notion.com/mcp"
+
+{{- range $name, $cfg := $mcpServers }}
+{{- if and (ne $name "github") (ne $name "linear") (ne $name "notion") }}
+[mcp_servers.{{ printf "%q" $name }}]
+{{- range $k, $v := $cfg }}
+{{ $k }} = {{ $v | toJson }}
+{{- end }}
+
+{{- end }}
+{{- end }}
+
+{{- range $name, $cfg := $plugins }}
+[plugins.{{ printf "%q" $name }}]
+{{- range $k, $v := $cfg }}
+{{ $k }} = {{ $v | toJson }}
+{{- end }}
+
+{{- end }}
 
 {{- range $path, $cfg := $projects }}
 [projects.{{ printf "%q" $path }}]
