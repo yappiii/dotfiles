@@ -3,22 +3,24 @@
 {{- if (stat $dst) -}}
   {{- $existing = (include $dst | fromToml) -}}
 {{- end -}}
-{{- $model := (get $existing "model" | default "gpt-5.2-codex") -}}
+{{- $model := (get $existing "model" | default "gpt-5.5") -}}
 {{- $modelReasoningEffort := (get $existing "model_reasoning_effort" | default "medium") -}}
 {{- $networkAccess := (get $existing "network_access" | default true) -}}
-{{- $approvalPolicy := (get $existing "approval_policy" | default "on-request") -}}
 {{- $features := (get $existing "features" | default (dict)) -}}
 {{- $mcpServers := (get $existing "mcp_servers" | default (dict)) -}}
 {{- $projects := (get $existing "projects" | default (dict)) -}}
 {{- $plugins := (get $existing "plugins" | default (dict)) -}}
+{{- $sandboxMode := (get $existing "sandbox_mode" | default "workspace-write") -}}
+{{- $sandboxWorkspaceWrite := (get $existing "sandbox_workspace_write" | default (dict)) -}}
+{{- $networkAccess := (get $sandboxWorkspaceWrite "network_access" | default (get $existing "network_access" | default true)) -}}
 
+approval_policy = "never"
+sandbox_mode = "workspace-write"
 model = {{ $model | toJson }}
 model_reasoning_effort = {{ $modelReasoningEffort | toJson }}
 network_access = {{ $networkAccess | toJson }}
-approval_policy = {{ $approvalPolicy | toJson }}
 
 [features]
-web_search_request = true
 experimental_use_rmcp_client = true
 {{- range $k, $v := $features }}
 {{- if and (ne $k "web_search_request") (ne $k "experimental_use_rmcp_client") }}
@@ -39,11 +41,22 @@ url = "https://mcp.notion.com/mcp"
 
 {{- range $name, $cfg := $mcpServers }}
 {{- if and (ne $name "github") (ne $name "linear") (ne $name "notion") }}
-[mcp_servers.{{ printf "%q" $name }}]
+[mcp_servers.{{ $name | toJson }}]
 {{- range $k, $v := $cfg }}
-{{ $k }} = {{ $v | toJson }}
+{{- if not (kindIs "map" $v) }}
+{{ $k | toJson }} = {{ $v | toJson }}
+{{- end }}
 {{- end }}
 
+{{- range $k, $v := $cfg }}
+{{- if kindIs "map" $v }}
+[mcp_servers.{{ $name | toJson }}.{{ $k | toJson }}]
+{{- range $kk, $vv := $v }}
+{{ $kk | toJson }} = {{ $vv | toJson }}
+{{- end }}
+
+{{- end }}
+{{- end }}
 {{- end }}
 {{- end }}
 
