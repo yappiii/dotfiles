@@ -1,0 +1,93 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = false
+palette = "raycast"
+
+format = """
+[](ray_red)\
+$directory\
+[](fg:ray_red bg:panel)\
+$git_branch\
+$git_status\
+[](fg:panel bg:surface)\
+$nodejs\
+$golang\
+$python\
+$rust\
+$cmd_duration\
+[](fg:surface)\
+$line_break\
+$character"""
+
+right_format = "$time$status"
+
+[palettes.raycast]
+ray_red = "#FF6363"
+ray_pink = "#FF4F8B"
+ray_purple = "#A855F7"
+ray_blue = "#5B8CFF"
+surface = "#252832"
+panel = "#1B1D24"
+text = "#F7F7F8"
+muted = "#8A8F98"
+success = "#59E08F"
+warning = "#FFD166"
+
+[directory]
+format = "[ $path ]($style)"
+style = "fg:text bg:ray_red bold"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " 󰌾"
+
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+symbol = " "
+style = "fg:text bg:panel"
+
+[git_status]
+format = "[$all_status$ahead_behind ]($style)"
+style = "fg:ray_pink bg:panel"
+
+[nodejs]
+format = "[ $symbol($version) ]($style)"
+symbol = "󰎙 "
+style = "fg:ray_blue bg:surface"
+
+[golang]
+format = "[ $symbol($version) ]($style)"
+symbol = " "
+style = "fg:ray_blue bg:surface"
+
+[python]
+format = "[ $symbol($version) ]($style)"
+symbol = " "
+style = "fg:warning bg:surface"
+
+[rust]
+format = "[ $symbol($version) ]($style)"
+symbol = " "
+style = "fg:ray_pink bg:surface"
+
+[cmd_duration]
+min_time = 1000
+format = "[ took $duration ]($style)"
+style = "fg:muted bg:surface"
+
+[time]
+disabled = false
+format = "[ $time ]($style)"
+style = "fg:muted"
+time_format = "%H:%M"
+
+[status]
+disabled = false
+format = "[ $symbol$status ]($style)"
+symbol = "×"
+success_symbol = ""
+style = "fg:ray_red"
+
+[character]
+success_symbol = "[❯](fg:ray_red bold)"
+error_symbol = "[❯](fg:ray_red bold)"
+vimcmd_symbol = "[❮](fg:ray_purple bold)"
