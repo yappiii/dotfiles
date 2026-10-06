@@ -1,7 +1,7 @@
 require("conform").setup({
   formatters_by_ft = {
     go = { "goimports", "gofmt" },
-    python = { "isort", "black" },
+    python = { "autopep8" },
     javascript = { "prettierd", "prettier", stop_after_first = true },
   },
   -- 保存時のオートフォーマット設定
