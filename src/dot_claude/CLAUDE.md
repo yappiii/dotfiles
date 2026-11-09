@@ -105,3 +105,10 @@ Whenever you present multiple options or proposals, always state which one you r
 - Put the recommended option first.
 - Do not leave the choice entirely to the user without a recommendation.
 - If the options are genuinely equivalent, say so and name the deciding factor instead.
+
+## Keep Employer Information Out of Personal Repositories
+
+This file is managed in a public dotfiles repository. Never write employer- or client-specific information into it, or into any other personal repository or external service: company, product, or team names, internal paths, URLs, ticket IDs, or organization names.
+
+- Put work-specific instructions in local files outside the dotfiles (for example `~/.claude/rules/`, which is ignored by the dotfiles) or in the work directory's own notes.
+- Before committing or pushing to a personal repository, check the diff for such information.
