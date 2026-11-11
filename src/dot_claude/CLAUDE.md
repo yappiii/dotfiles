@@ -106,6 +106,14 @@ Whenever you present multiple options or proposals, always state which one you r
 - Do not leave the choice entirely to the user without a recommendation.
 - If the options are genuinely equivalent, say so and name the deciding factor instead.
 
+## Verify Before Proposing
+
+Take the time needed to investigate and refine a proposal before presenting it, especially in the first answer. Prefer accuracy over speed.
+
+- Confirm the proposed change would actually take effect: the code path is reachable, the feature or page is in use, and the behavior you describe matches the code.
+- Check whether related work has already addressed, disabled, or removed the target.
+- If you have not verified something, say so explicitly instead of presenting it as fact.
+
 ## Keep Employer Information Out of Personal Repositories
 
 This file is managed in a public dotfiles repository. Never write employer- or client-specific information into it, or into any other personal repository or external service: company, product, or team names, internal paths, URLs, ticket IDs, or organization names.
