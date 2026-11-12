@@ -114,6 +114,14 @@ Take the time needed to investigate and refine a proposal before presenting it, 
 - Check whether related work has already addressed, disabled, or removed the target.
 - If you have not verified something, say so explicitly instead of presenting it as fact.
 
+## Trace the Impact of Shared Changes
+
+Work is usually scoped by feature or screen, but code and wording are shared by component. Following the change only within the scoped feature misses other places that use the same thing.
+
+- When changing a shared component, function, constant, or piece of wording, trace every consumer of it across the repository, not just the ones in scope.
+- Do this when starting the work (to agree on scope) and again from the diff before opening a pull request.
+- In the pull request, list what was changed and what was intentionally left unchanged, with the reason.
+
 ## Keep Employer Information Out of Personal Repositories
 
 This file is managed in a public dotfiles repository. Never write employer- or client-specific information into it, or into any other personal repository or external service: company, product, or team names, internal paths, URLs, ticket IDs, or organization names.

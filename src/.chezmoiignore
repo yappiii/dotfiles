@@ -1,2 +1,3 @@
 # Local-only Claude Code rules (may contain work-specific information). Never manage them here.
 .claude/rules
+.claude/skills
