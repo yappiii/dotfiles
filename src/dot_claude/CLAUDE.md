@@ -114,6 +114,15 @@ Take the time needed to investigate and refine a proposal before presenting it, 
 - Check whether related work has already addressed, disabled, or removed the target.
 - If you have not verified something, say so explicitly instead of presenting it as fact.
 
+## Handling Information (IMPORTANT)
+
+- When something is unclear, do not immediately ask the user or stop working. First investigate code, documentation, and the web yourself, and answer from the facts you were able to confirm.
+- When investigation is needed, delegate it to the `researcher` subagent and bring back only the conclusion and its sources to the main session. Do not keep the investigation process in the main session.
+- Always back factual statements with evidence: `file:line`, a URL, or the command you ran and its output.
+- In answers, clearly separate what is **verified** from what is **inferred**. Never present an inference as fact.
+- Answer "I don't know" only when investigation could not confirm it. In that case, state what you checked and what could not be confirmed.
+- Ask the user only about things investigation cannot settle: requirements, intent, and preferences.
+
 ## Trace the Impact of Shared Changes
 
 Work is usually scoped by feature or screen, but code and wording are shared by component. Following the change only within the scoped feature misses other places that use the same thing.
